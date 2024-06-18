@@ -9,7 +9,7 @@ const { products } = defineProps<{
 		<div class="products__item" v-for="product in products" :key="product.id">
 			<div v-if="product.price.old_price" class="direction__sale">Скидка</div>
 			<div class="products__img">
-				<img :src="product.image.url" />
+				<NuxtImg :src="product.image.url" :alt="'картинка ' + product.name" />
 			</div>
 			<div class="product__content direction">
 				<p class="direction__code">{{ product.code }}</p>
