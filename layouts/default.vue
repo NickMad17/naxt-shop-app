@@ -1,7 +1,9 @@
 <template>
+	<header />
 	<main class="center">
 		<slot />
 	</main>
+	<footer />
 </template>
 
 <style scoped>

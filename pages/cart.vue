@@ -5,7 +5,12 @@ const cartProducts = useCartStore()
 <template>
 	<Breadcrumbs my-path="Корзина" />
 	<h1 class="heading">Корзина</h1>
-	<Products class="" :products="cartProducts.cart" />
+	<Products
+		v-if="cartProducts.cart.length > 0"
+		class=""
+		:products="cartProducts.cart"
+	/>
+	<p class="info" v-else>Корзина пуста</p>
 </template>
 
 <style lang="scss" scoped>
