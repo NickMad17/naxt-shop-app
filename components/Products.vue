@@ -52,6 +52,7 @@ const { products } = defineProps<{
 		text-align: center;
 		max-width: 336px;
 		padding: 10px;
+		border: 1px solid #eeeeee;
 	}
 
 	&__img {
