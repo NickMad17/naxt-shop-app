@@ -48,8 +48,12 @@ const { products } = defineProps<{
 	column-gap: 40px;
 
 	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		position: relative;
 		text-align: center;
+		min-height: 352px;
 		max-width: 336px;
 		padding: 10px;
 		border: 1px solid #eeeeee;
@@ -83,6 +87,10 @@ const { products } = defineProps<{
 		font-weight: 500;
 		line-height: 22.4px;
 		margin-bottom: 10px;
+		// white-space: nowrap; /* Запрещает перенос строк */
+		// overflow: hidden; /* Обрезает содержимое, если оно переполняет блок */
+		// text-overflow: ellipsis;
+		// width: 200px;
 	}
 
 	&__box {
@@ -129,7 +137,7 @@ const { products } = defineProps<{
 	}
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
 	.products {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
@@ -143,7 +151,7 @@ const { products } = defineProps<{
 		align-items: center;
 		grid-template-columns: repeat(1, 1fr);
 		&__item {
-			max-width: 100%;
+			width: 300px;
 		}
 	}
 }
