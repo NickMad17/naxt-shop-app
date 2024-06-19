@@ -31,3 +31,9 @@ body {
 	font-weight: 500;
 	margin-top: 10px;
 }
+
+@media (max-width: 480px) {
+	.heading {
+		font-size: 28px;
+	}
+}
